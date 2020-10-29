@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     public MyEvent Damaged;
 
+    public UnityEvent Invicibility;
     public UnityEvent Death;
     public UnityEvent Pause;
     public GameObject fireballPrefab;
@@ -30,6 +31,7 @@ public class PlayerScript : MonoBehaviour
     private float lockMinY = -50f;
     private float lockMaxY = 50f;
     private float shakeMagnitude = 2;
+    private float invincibilityCpt = 0;
 
     private Vector3 originalPosition;
 
@@ -45,6 +47,9 @@ public class PlayerScript : MonoBehaviour
     {
         if(health > 0 && Time.timeScale > 0)
         {
+            if(invincibilityCpt >0)
+                invincibilityCpt -= Time.deltaTime;
+            
             Transform camera = transform.GetChild(0);
             JumpLimiter jumpLimiter = transform.GetChild(1).gameObject.GetComponent<JumpLimiter>();
 
@@ -143,11 +148,13 @@ public class PlayerScript : MonoBehaviour
 
     public void damage()
     {
-        health--;
-        Damaged.Invoke(health, true);
-        if(health <= 0)
-        {
-            Death.Invoke();
+        if(invincibilityCpt <=0){
+            health--;
+            Damaged.Invoke(health, true);
+            if(health <= 0)
+            {
+                Death.Invoke();
+            }
         }
 
     }
@@ -174,5 +181,10 @@ public class PlayerScript : MonoBehaviour
     public void shake()
     {
         shakeCpt = 2f;
+    }
+
+    public void activateInvincibility(){
+        invincibilityCpt = 5f;
+        Invicibility.Invoke();
     }
 }

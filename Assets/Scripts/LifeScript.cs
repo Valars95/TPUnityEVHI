@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LifeScript : MonoBehaviour
 {
+    public bool invincibility = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +21,16 @@ public class LifeScript : MonoBehaviour
     {
         if(other.tag == "Player"){
             GameObject obj = other.gameObject; 
-            if( ((PlayerScript)(obj.GetComponent<PlayerScript>())).health < 3)
-            {
-                ((PlayerScript)(obj.GetComponent<PlayerScript>())).heal();
+            if(invincibility){
+                ((PlayerScript)(obj.GetComponent<PlayerScript>())).activateInvincibility();
                 Destroy(this.gameObject);
+            }
+            else{
+                if( ((PlayerScript)(obj.GetComponent<PlayerScript>())).health < 3)
+                {
+                    ((PlayerScript)(obj.GetComponent<PlayerScript>())).heal();
+                    Destroy(this.gameObject);
+                }
             }
         }
     }
