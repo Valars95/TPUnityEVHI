@@ -14,8 +14,8 @@ public class PlayerScript : MonoBehaviour
     public UnityEvent Pause;
     public GameObject fireballPrefab;
     public float moveSpeed = 10f;
-    private float XSensivity = 5f;
-    private float YSensivity = 5f;
+    private float XSensivity = 1f;
+    private float YSensivity = 1f;
     public float shootSpeed = 180f;
     public float fireCooldown = 0.5f;
     private float fireCooldownCpt = 0;
@@ -33,7 +33,6 @@ public class PlayerScript : MonoBehaviour
 
     private Vector3 originalPosition;
 
-    private bool paused = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +43,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(health > 0 && !paused && Time.timeScale > 0)
+        if(health > 0 && Time.timeScale > 0)
         {
             Transform camera = transform.GetChild(0);
             JumpLimiter jumpLimiter = transform.GetChild(1).gameObject.GetComponent<JumpLimiter>();
@@ -163,14 +162,12 @@ public class PlayerScript : MonoBehaviour
     public void pause()
     {
         Time.timeScale = 0;
-        paused = true;
         Pause.Invoke();
     }
 
     public void unPause()
     {
         Time.timeScale = 1;
-        paused = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
