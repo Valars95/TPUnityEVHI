@@ -7,10 +7,11 @@ public class HorizontalDoorScript : MonoBehaviour
     public bool isOpen = false;
     public float moveSpeed = 2f;
     public float openTrack = 0;
+    private Color baseColor;
     // Start is called before the first frame update
     void Start()
     {
-        
+        baseColor =  GetComponent<Renderer>().material.color;
     }
 
     // Update is called once per frame
@@ -33,10 +34,12 @@ public class HorizontalDoorScript : MonoBehaviour
     public void open()
     {
         isOpen = true;
+        GetComponent<Renderer>().material.color = Color.red;
     }
 
     public void close()
     {
         isOpen = false;
+        GetComponent<Renderer>().material.color = baseColor;
     }
 }
