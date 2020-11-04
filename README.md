@@ -5,9 +5,9 @@ Mini projet Unity - EVHI 2020
 Nartz Kévin
 n° 3526226
 
-#Contrôles
+# Contrôles
 
-##Clavier et souris
+## Clavier et souris
 Souris pour la caméra
 Z : Avancer
 S : Reculer
@@ -18,7 +18,7 @@ Space : Sauter
 Clic gauche : Tirer
 Esc : Pause
 
-##Manette (Xbox Pad)
+## Manette (Xbox Pad)
 Stick Analogique gauche pour se déplacer
 Stick Analogique droit pour déplacer la caméra
 A : Sauter
