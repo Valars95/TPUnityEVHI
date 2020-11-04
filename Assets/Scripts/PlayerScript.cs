@@ -184,7 +184,7 @@ public class PlayerScript : MonoBehaviour
     }
 
     public void activateInvincibility(){
-        invincibilityCpt = 5f;
+        invincibilityCpt = 10f;
         Invicibility.Invoke();
     }
 }
