@@ -59,8 +59,8 @@ Les boules jaunes permettent de rendre votre personnage invincible pendant 5s (l
 * Filtre coloré lors de la prise de dégat (rouge), de boule de vie (vert) et d'invinciblité (jaune).
 
 ## Écran titre
-Au lancement du jeu.  
-Jouer : Lance le 1er niveau.
+* Au lancement du jeu.  
+* Jouer : Lance le 1er niveau.
 
 ## Menu pause
 * Accès avec esc ou pause.  
