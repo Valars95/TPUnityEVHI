@@ -35,7 +35,7 @@ Attention on ne peut pas naviguer dans les menus avec la manette.
 Intéragir avec le bouton sur le mur pour sortir.
 
 ## Niveau 2
-Le bouton sur le pylone est bloqué, détruire l'ennemi pour le débloquer et ensuite l'activer pour sortir.
+Le bouton sur le pylone est bloqué, détruire l'ennemi (3 points de vie) pour le débloquer et ensuite l'activer pour sortir.
 
 ## Niveau 3
 Un ennemi vous poursuit, échappez vous en vous dirigeant vers l'isoloir et en activant le bouton tout en évitant l'ennemi.  
@@ -53,7 +53,7 @@ Les boules jaunes permettent de rendre votre personnage invincible pendant 5s (l
 
 # UI
 ## Interface en jeu
-Points de vie (3PVs)sous forme de coeurs en haut à gauche.  
+Points de vie (3PVs) sous forme de coeurs en haut à gauche.  
 Viseur pour le tir.  
 Barre de vie pour le dragon au niveau 5.  
 Filtre coloré lors de la prise de dégat (rouge), de boule de vie (vert) et d'invinciblité (jaune).
@@ -72,3 +72,11 @@ Quitter : Quitte le jeu.
 S'active quand le personnage perd tout ses points de vie.  
 Continuer : Relance le niveau.  
 Quitter : Quitte le jeu.
+
+## Écran de fin
+S'active peu après la mort du dragon.  
+Affiche un message qui félicite le joueur et propose un bouton pour quitter le jeu.
+
+# Différences par rapport aux consignes
+La porte battante demandé au niveau 5 est à la fin du niveau 4, le niveau 4 ne comporte donc pas de bouton pour accèder au niveau 5.
+Dans le niveau 5, il y a déjà un peu de lumière au centre de la pièce pour indiquer la position du trésor. La lumière s'amplifie une fois le trésor atteint.
