@@ -39,7 +39,7 @@ Intéragir avec le bouton sur le mur pour sortir.
 Le bouton sur le pylone est bloqué, détruire l'ennemi (3 points de vie) pour le débloquer et ensuite l'activer pour sortir.
 
 ## Niveau 3
-Un ennemi vous poursuit, échappez vous en vous dirigeant vers l'isoloir et en activant le bouton tout en évitant l'ennemi.  
+Un ennemi immortel vous poursuit, échappez vous en vous dirigeant vers l'isoloir et en activant le bouton tout en évitant l'ennemi.  
 Les boules rouges dans le niveau sont des points de vie, récupèrables uniquement si vous perdez de la vie (si l'ennemi vous touche par exemple).
 
 ## Niveau 4
