@@ -15,8 +15,8 @@ public class PlayerScript : MonoBehaviour
     public UnityEvent Pause;
     public GameObject fireballPrefab;
     public float moveSpeed = 10f;
-    private float XSensivity = 1f;
-    private float YSensivity = 1f;
+    private float XSensivity = 1.5f;
+    private float YSensivity = 1.5f;
     public float shootSpeed = 180f;
     public float fireCooldown = 0.5f;
     private float fireCooldownCpt = 0;
