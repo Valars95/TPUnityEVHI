@@ -1,9 +1,10 @@
-# TPUnityEVHI
+# Mini projet Unity - EVHI 2020
 
-Mini projet Unity - EVHI 2020
+# Étudiant
 
 Nartz Kévin  
-n° 3526226
+n° 3526226  
+kevinnartz@gmail.com
 
 # Contrôles
 
