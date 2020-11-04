@@ -1,4 +1,5 @@
 # Mini projet Unity - EVHI 2020
+Version : Unity 2020.1.11f1
 
 # Étudiant
 
