@@ -16,10 +16,11 @@ public class EnemyScript : MonoBehaviour
     private float damagedTimeCpt = 0;
     private bool damaged = false;
     private float stopTimeCpt = 0;
+    private Color baseColor;
     // Start is called before the first frame update
     void Start()
     {
-        
+        baseColor = GetComponent<Renderer>().material.color;
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class EnemyScript : MonoBehaviour
         }
         else
         {
-            GetComponent<Renderer>().material.SetColor("_Color",Color.white);
+            GetComponent<Renderer>().material.SetColor("_Color",baseColor);
             damaged = false;
             damagedTimeCpt = 0;
         }
