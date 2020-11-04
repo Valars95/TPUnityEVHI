@@ -31,7 +31,7 @@ public class HealthScript : MonoBehaviour
     public void invincibilityScreen()
     {
         gameObject.transform.parent.GetChild(3).gameObject.GetComponent<Image>().color = new Color(1f,1f,0f,0.1f);
-        damagedScreenCpt = 5f;
+        damagedScreenCpt = 10f;
     }
 
     public void setHealth(int health, bool type)
