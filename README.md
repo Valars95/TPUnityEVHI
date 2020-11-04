@@ -78,5 +78,5 @@ S'active peu après la mort du dragon.
 Affiche un message qui félicite le joueur et propose un bouton pour quitter le jeu.
 
 # Différences par rapport aux consignes
-La porte battante demandé au niveau 5 est à la fin du niveau 4, le niveau 4 ne comporte donc pas de bouton pour accèder au niveau 5.
+La porte battante demandé au niveau 5 est à la fin du niveau 4, le niveau 4 ne comporte donc pas de bouton pour accèder au niveau 5.  
 Dans le niveau 5, il y a déjà un peu de lumière au centre de la pièce pour indiquer la position du trésor. La lumière s'amplifie une fois le trésor atteint.
