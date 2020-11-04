@@ -8,9 +8,9 @@ n° 3526226
 # Contrôles
 
 ## Clavier et souris
-Souris pour la caméra &nbsp
-Z : Avancer
-S : Reculer
+Souris pour la caméra  
+Z : Avancer  
+S : Reculer  
 Q : Déplacement latéral gauche
 D : Déplacement latéral droit
 E : Intéragir
