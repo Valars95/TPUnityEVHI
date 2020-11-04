@@ -49,3 +49,25 @@ Vous êtes dans une grotte mal éclairé avec un trésor au milieu. Approchez vo
 Le dragon a 20 points de vie, sa barre de vie est visible en bas de l'écran.  
 Il y a des boules rouges dans le niveau pour récupèrer de la vie.  
 Les boules jaunes permettent de rendre votre personnage invincible pendant 5s (l'écran a un filtre jaune pendant toute la durée).
+
+# UI
+## Interface en jeu
+Points de vie (3PVs)sous forme de coeurs en haut à gauche.  
+Viseur pour le tir.  
+Barre de vie pour le dragon au niveau 5.  
+Filtre coloré lors de la prise de dégat (rouge), de boule de vie (vert) et d'invinciblité (jaune).
+
+## Écran titre
+Au lancement du jeu.  
+Jouer : Lance le 1er niveau.
+
+## Menu pause
+Accès avec esc ou pause.  
+Continuer : Reprend là où la pause a été déclenché.  
+Relancer : Relance le niveau.  
+Quitter : Quitte le jeu.
+
+## Menu de mort
+S'active quand le personnage perd tout ses points de vie.  
+Continuer : Relance le niveau.  
+Quitter : Quitte le jeu.
