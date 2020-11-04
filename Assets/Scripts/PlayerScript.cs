@@ -53,12 +53,6 @@ public class PlayerScript : MonoBehaviour
             Transform camera = transform.GetChild(0);
             JumpLimiter jumpLimiter = transform.GetChild(1).gameObject.GetComponent<JumpLimiter>();
 
-            //Move
-            transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime);
-            transform.Translate(Vector3.right * Input.GetAxis("Horizontal") *  moveSpeed * Time.deltaTime);
-
-            //Camera rotations
-
             rotationX = 0;
             if(Input.GetAxis("JoystickY") > 0.1 || Input.GetAxis("JoystickY") < -0.1 )
             {
@@ -85,6 +79,15 @@ public class PlayerScript : MonoBehaviour
             transform.Rotate(Vector3.up, rotationX);
             GetComponent<Rigidbody>().MoveRotation(transform.rotation);
 
+            if(shakeCpt > 0)
+            {
+                camera.transform.Translate(camera.forward * Random.Range(-1f,1f) * Time.deltaTime * shakeMagnitude);
+                camera.transform.Translate(camera.right * Random.Range(-1f,1f) * Time.deltaTime * shakeMagnitude);
+                camera.transform.Translate(camera.up * Random.Range(-1f,1f) * Time.deltaTime * shakeMagnitude);
+                shakeCpt -= Time.deltaTime;
+            }
+            else
+                camera.transform.localPosition = originalPosition;
 
             //Jump
             if(Input.GetButtonDown("Jump") && jumpLimiter.canJump)
@@ -96,11 +99,8 @@ public class PlayerScript : MonoBehaviour
             //RayCast
             RaycastHit hit;
 
-
-            Debug.DrawRay(camera.position, camera.forward, Color.red);
             if(Physics.Raycast(camera.position, camera.forward, out hit, interactionDistance, LayerMask.GetMask("Default")))
             {
-                Debug.DrawRay(camera.position, camera.forward * hit.distance, Color.yellow);
                 //Debug.Log("hit");
                 GameObject obj;
                 obj = hit.collider.gameObject;
@@ -122,15 +122,7 @@ public class PlayerScript : MonoBehaviour
                 fireCooldownCpt = fireCooldown;
             }
 
-            if(shakeCpt > 0)
-            {
-                camera.transform.Translate(camera.forward * Random.Range(-1f,1f) * Time.deltaTime * shakeMagnitude);
-                camera.transform.Translate(camera.right * Random.Range(-1f,1f) * Time.deltaTime * shakeMagnitude);
-                camera.transform.Translate(camera.up * Random.Range(-1f,1f) * Time.deltaTime * shakeMagnitude);
-                shakeCpt -= Time.deltaTime;
-            }
-            else
-                camera.transform.localPosition = originalPosition;
+            
             
 
             if(Input.GetButtonDown("Cancel"))
@@ -141,9 +133,10 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    void OnDrawGizmos()
+    public void FixedUpdate()
     {
-        Gizmos.DrawSphere(transform.GetChild(0).position + transform.GetChild(0).forward *2, 0.02f);
+        transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.right * Input.GetAxis("Horizontal") *  moveSpeed * Time.deltaTime);
     }
 
     public void damage()
