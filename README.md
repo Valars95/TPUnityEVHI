@@ -8,7 +8,7 @@ n° 3526226
 # Contrôles
 
 ## Clavier et souris
-Souris pour la caméra
+Souris pour la caméra &nbsp
 Z : Avancer
 S : Reculer
 Q : Déplacement latéral gauche
