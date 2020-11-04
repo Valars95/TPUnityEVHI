@@ -63,10 +63,10 @@ Au lancement du jeu.
 Jouer : Lance le 1er niveau.
 
 ## Menu pause
-Accès avec esc ou pause.  
-Continuer : Reprend là où la pause a été déclenché.  
-Relancer : Relance le niveau.  
-Quitter : Quitte le jeu.
+l. Accès avec esc ou pause.  
+l. Continuer : Reprend là où la pause a été déclenché.  
+l. Relancer : Relance le niveau.  
+l. Quitter : Quitte le jeu.
 
 ## Menu de mort
 S'active quand le personnage perd tout ses points de vie.  
